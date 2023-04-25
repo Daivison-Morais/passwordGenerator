@@ -5,7 +5,6 @@ describe("POST /generate-password", () => {
   it("should generate a new password", async () => {
     const body = { length: 12 };
     const result = await supertest(app).post("/generate-password").send(body);
-    console.log(result);
 
     expect(result.status).toEqual(201);
   });
