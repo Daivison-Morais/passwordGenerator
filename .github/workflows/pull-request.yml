@@ -16,5 +16,6 @@ jobs:
           envkey_POSTGRES_DB: passwords
           directory: back-end
           file_name: .env.test
+          fail_on_empty: true
       - name: Run tests # nome qualquer
         run: docker compose -f docker-compose-test.yml run node npm run test
