@@ -12,7 +12,7 @@ describe("POST /generate-password", () => {
   it("should not generate a new password without the length", async () => {
     const body = {};
     const result = await supertest(app).post("/generate-password").send(body);
-    console.log(result);
+    
     expect(result.status).toEqual(422);
   });
 
